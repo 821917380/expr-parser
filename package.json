@@ -1,12 +1,13 @@
 {
   "name": "expr-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is a simple javascript expression parser",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest ./test.js --silent --bail",
     "coverage": "jest ./test.js --coverage --bail",
-    "coveralls": "jest ./test.js --coverage --coverageReporters=text-lcov | coveralls"
+    "coveralls": "jest ./test.js --coverage --coverageReporters=text-lcov | coveralls",
+    "build": "babel ./index.js --out-dir dist"
   },
   "jest": {
     "testEnvironment": "node",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/JuneAndGreen/expr-parser#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0"
   }
